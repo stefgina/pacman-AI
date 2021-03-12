@@ -20,7 +20,7 @@ Decision Trees further boost the pacman agent with AI capabillities. For more in
 
 ## 2. Description
   
-AI pacman implementation in pure Python. It depends only in basic python libraries such as numpy and pygame. The A pacman agent runs with two independent but equal functionality modules. A Behaviour tree and a Finite State Machine. Both of these modules end up utilizing the same set of actions (such as Eat Pills, Escape the Ghosts, Ignore the ghosts). The escence of these actions lies in minimization/ maximization of Euclidean distances between pacman and a target (ghosts or pills). The pygame gameflow consists of a launch-screen, and a main game loop where the program can also wait for button presses for a human player to control pacman if needed. There is also score-keeping functionality. Here is a preview of the main game-states:
+AI pacman implementation in pure Python. It depends only in basic python libraries such as numpy and pygame. The A pacman agent runs with two independent but equal functionality modules. A Behaviour tree and a Finite State Machine. Both of these modules end up utilizing the same set of actions (such as Eat Pills, Escape the Ghosts, Ignore the ghosts). The escence of these actions lies in minimization/ maximization of Euclidean distances between pacman and a target (ghosts or pills). The pygame gameflow consists of a launch-screen, and a main game loop where the program can also wait for button presses for a human player to control pacman if needed. There is also score-keeping functionality. Here is a preview of the main game-state:
 
 
 <img src="https://github.com/stefgina/pacman-python-AI/blob/main/pacman2.png" width="345" height="415"/>
