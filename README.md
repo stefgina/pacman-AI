@@ -6,16 +6,30 @@ Author -> Stefanos Ginargyros
 ```
 
 
-## 1. Depedencies
+## 1. Installation
 
-In order to execute the game properly (+ the AI functionality), you will have to:
+In order to properly install the game:
 
-```
-pip install pygame
-pip install py_trees
-``` 
+- Install conda. If you don't know how go [here](https://conda.io/projects/conda/en/latest/user-guide/install/index.html)
 
-Decision Trees further boost the pacman agent with AI capabillities. For more information about the library read [here](https://py-trees.readthedocs.io/en/devel/).
+- Then create a conda env
+
+  ```bash
+  conda create -n pacmanAI python=3.10
+  conda activate pacmanAI
+  ```
+
+- Now install the deps
+
+  ```bash
+  pip install -r requirements.txt
+  ```
+
+- You are ready to run the game
+
+  ```bash
+  python3 Pacman.py
+  ```
 
 
 ## 2. Description
@@ -27,6 +41,8 @@ AI pacman implementation in pure Python. It depends only in basic python librari
 
 
 ## 3. Behaviour Tree
+
+Decision Trees further boost the pacman agent with AI capabillities. For more information about the library read [here](https://py-trees.readthedocs.io/en/devel/).
 
 The behaviour tree was implemented inside the framework py-trees. It is an open source library for fast behaviour-tree implementations in C++ wrapped up in Python. The root node is a Selector node which selects between 3 actions. Every action is implemented as a different class, which inherrits from pytrees.Behaviour libray. The tree works with a single tick(), on every single frame of the game loop. The tick (pulse) starts from root node, checks the conditions for every action and return SUCESS or FAILURE accordingly. If the output of the action is SUCCESS then the tree stops ticking for the particular frame. If it is FAILURE the tick() goes to the lower priority action-nodes and checks for conditions.
 
